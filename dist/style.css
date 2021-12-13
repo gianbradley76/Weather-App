@@ -1,0 +1,46 @@
+:root {
+	--font: 'Varela Round', sans-serif;
+}
+
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html,
+body {
+	height: 100vh;
+	width: 100vw;
+	font-family: var(--font);
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background-color: darkgray;
+}
+
+input {
+	font-size: 15px;
+	padding: 15px;
+	margin: 10px 10px;
+	border: none;
+}
+
+input[type='submit'] {
+}
+
+input[type='text'] {
+	font-family: var(--font);
+	border: none;
+}
+
+img {
+	height: 50px;
+	width: 50px;
+}
