@@ -25,17 +25,12 @@ body {
 	background-color: darkgray;
 }
 
-input {
+#cityInput,
+#submitCity {
 	font-size: 15px;
 	padding: 15px;
 	margin: 10px 10px;
 	border: none;
-}
-
-input[type='submit'] {
-}
-
-input[type='text'] {
 	font-family: var(--font);
 	border: none;
 }
@@ -43,4 +38,12 @@ input[type='text'] {
 img {
 	height: 50px;
 	width: 50px;
+	border: none;
+}
+
+.hourlyInfo {
+	display: flex;
+	width: 80%;
+	align-items: stretch;
+	justify-content: space-around;
 }

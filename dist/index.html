@@ -14,17 +14,34 @@
 		<title>Simple Weather App</title>
 	</head>
 	<body>
-		<form class="city-form">
-			<input type="text" name="City" id="city-input" placeholder="City" />
-			<input type="submit" value="Submit" id="submitBtn" />
-		</form>
-		<div class="weatherInfo">
-			<img id="weather-img" />
-			<h1 id="city-title"></h1>
+		<div class="city-form">
+			<input type="text" name="City" id="cityInput" placeholder="City" />
+			<button type="submit" id="submitCity">Search</button>
+		</div>
+		<div class="mainWeatherInfo">
+			<img id="weatherIcon" />
+			<h1 id="cityName"></h1>
 			<h2>Current Temperature:</h2>
-			<h2 id="curr-temp"></h2>
+			<h2 id="currTemp"></h2>
 			<h2>Weather:</h2>
-			<h2 id="main-weather"></h2>
+			<h2 id="mainWeather"></h2>
+		</div>
+		<div class="hourlyInfo">
+			<div>
+				<h4 class="hour-0">LOL</h4>
+			</div>
+			<div>
+				<h4 class="hour-1">LOL</h4>
+			</div>
+			<div>
+				<h4 class="hour-2">LOL</h4>
+			</div>
+			<div>
+				<h4 class="hour-3">LOL</h4>
+			</div>
+			<div>
+				<h4 class="hour-4">LOL</h4>
+			</div>
 		</div>
 		<script src="main.js"></script>
 	</body>
