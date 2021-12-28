@@ -9,24 +9,34 @@ function displayWeather(data) {
 	const dataIcon = data.current.weather[0].icon;
 	const weatherImg = document.getElementById('weatherIcon');
 
-	weatherImg.src = `http://openweathermap.org/img/wn/${dataIcon}.png`;
+	weatherImg.src = fetchIconURL(dataIcon);
 
-	console.log(data.hourly);
 	displayHourlyInfo(data.hourly);
 }
 
 function displayHourlyInfo(hourlyData) {
 	for (let i = 0; i < 5; i++) {
-		document.getElementById(`${i}-hourDate`).textContent = convertDate(
-			hourlyData[i].dt
+		const unixDateTime = hourlyData[i].dt;
+		// Hourly Info Weather Icon
+		document.getElementById(`${i}-hourIcon`).src = fetchIconURL(
+			hourlyData[i].weather[0].icon
 		);
-		document.getElementById(`${i}-hourTime`).textContent = convertTime(
-			hourlyData[i].dt
-		);
+		// Hourly Info Date
+		document.getElementById(`${i}-hourDate`).textContent =
+			convertDate(unixDateTime);
+		// Hourly Info Time
+		document.getElementById(`${i}-hourTime`).textContent =
+			convertTime(unixDateTime);
+		// Hourly Info Temperature
 		document.getElementById(`${i}-hourTemp`).textContent = hourlyData[i].temp;
+		// Hourly Info Weather
 		document.getElementById(`${i}-hourMain`).textContent =
 			hourlyData[i].weather[0].main;
 	}
+}
+
+function fetchIconURL(icon) {
+	return `http://openweathermap.org/img/wn/${icon}.png`;
 }
 
 function convertDate(unixFormat) {
@@ -61,5 +71,4 @@ submitCity.addEventListener('click', async () => {
 	const cityInput = document.getElementById('cityInput').value;
 	const data = await fetchData(cityInput);
 	displayWeather(data);
-	console.log('final: ', data);
 });

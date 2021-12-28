@@ -15,11 +15,18 @@
 	</head>
 	<body>
 		<div class="city-form">
-			<input type="text" name="City" id="cityInput" placeholder="City" />
-			<button type="submit" id="submitCity">Search</button>
+			<input
+				type="text"
+				name="City"
+				id="cityInput"
+				placeholder="Enter location"
+			/>
+			<button type="submit" id="submitCity">
+				<img src="./images/search.svg" class="search-icon" alt="Search" />
+			</button>
 		</div>
 		<div class="mainWeatherInfo">
-			<img id="weatherIcon" />
+			<img id="weatherIcon" src="./images/clear-day.svg" />
 			<h1 id="cityName"></h1>
 			<h2>Current Temperature:</h2>
 			<h2 id="currTemp"></h2>
@@ -28,34 +35,39 @@
 		</div>
 		<div class="hourlyInfo">
 			<div class="0-hour">
-				<p id="0-hourDate"></p>
-				<p id="0-hourTime"></p>
+				<img id="0-hourIcon" />
 				<p id="0-hourMain"></p>
 				<p id="0-hourTemp"></p>
+				<p id="0-hourTime"></p>
+				<p id="0-hourDate"></p>
 			</div>
 			<div class="1-hour">
-				<p id="1-hourDate"></p>
-				<p id="1-hourTime"></p>
+				<img id="1-hourIcon" />
 				<p id="1-hourMain"></p>
 				<p id="1-hourTemp"></p>
+				<p id="1-hourTime"></p>
+				<p id="1-hourDate"></p>
 			</div>
 			<div class="2-hour">
-				<p id="2-hourDate"></p>
-				<p id="2-hourTime"></p>
+				<img id="2-hourIcon" />
 				<p id="2-hourMain"></p>
 				<p id="2-hourTemp"></p>
+				<p id="2-hourTime"></p>
+				<p id="2-hourDate"></p>
 			</div>
 			<div class="3-hour">
-				<p id="3-hourDate"></p>
-				<p id="3-hourTime"></p>
+				<img id="3-hourIcon" />
 				<p id="3-hourMain"></p>
 				<p id="3-hourTemp"></p>
+				<p id="3-hourTime"></p>
+				<p id="3-hourDate"></p>
 			</div>
 			<div class="4-hour">
-				<p id="4-hourDate"></p>
-				<p id="4-hourTime"></p>
+				<img id="4-hourIcon" />
 				<p id="4-hourMain"></p>
 				<p id="4-hourTemp"></p>
+				<p id="4-hourTime"></p>
+				<p id="4-hourDate"></p>
 			</div>
 		</div>
 		<script src="main.js"></script>
